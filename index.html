@@ -30,16 +30,16 @@
             box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
             z-index: 1;
         }
-    
+
         #language-options li {
             padding: 8px 16px;
             cursor: pointer;
         }
-    
+
         #language-options li:hover {
             background-color: #ddd;
         }
-    
+
         .header__top__right__language:hover #language-options {
             display: block;
         }
@@ -92,18 +92,18 @@
                 <div class="col-lg-6">
                     <nav class="header__menu">
                         <ul>
-                            <li class="active"><a href="./index.html">Home</a></li>
-                            <li><a href="./shop-grid.html">Shop</a></li>
-                            <li><a href="#">Pages</a>
+                            <li class="active"><a href="./index.html" id="home-link">Home</a></li>
+                            <li><a href="./shop-grid.html" id="shop-link">Shop</a></li>
+                            <li><a href="#" id="pages-link">Pages</a>
                                 <ul class="header__menu__dropdown">
-                                    <li><a href="./shop-details.html">Shop Details</a></li>
-                                    <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                                    <li><a href="./checkout.html">Check Out</a></li>
-                                    <li><a href="./blog-details.html">Blog Details</a></li>
+                                    <li><a href="./shop-details.html" id="shop-details-link">Shop Details</a></li>
+                                    <li><a href="./shoping-cart.html" id="shopping-cart-link">Shoping Cart</a></li>
+                                    <li><a href="./checkout.html" id="checkout-link">Check Out</a></li>
+                                    <li><a href="./blog-details.html" id="blog-details-link">Blog Details</a></li>
                                 </ul>
                             </li>
-                            <li><a href="./blog.html">Blog</a></li>
-                            <li><a href="./contact.html">Contact</a></li>
+                            <li><a href="./blog.html" id="blog-link">Blog</a></li>
+                            <li><a href="./contact.html" id="contact-link">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -117,14 +117,14 @@
 
     <!-- Hero Section Begin -->
     <section class="hero">
-        <div class="container" >
+        <div class="container">
             <div class="row">
                 <div class="col-lg-9">
                     <div class="hero__search">
                         <div class="hero__search__form">
                           <form action="#">
-                            <input type="text" placeholder="What do yo u need?">
-                            <button type="submit" class="site-btn">Search</button>
+                            <input type="text" placeholder="What do you need?" id="search-input">
+                            <button type="submit" class="site-btn" id="search-button">Search</button>
                         </form>
                         </div>
                     </div>
@@ -142,27 +142,27 @@
                 <div class="categories__slider owl-carousel">
                     <div class="col-lg-3">
                         <div class="categories__item set-bg" data-setbg="img/categories/cat-1.jpg">
-                            <h5><a href="#">Fresh Fruit</a></h5>
+                            <h5><a href="#" id="cat1-link">Fresh Fruit</a></h5>
                         </div>
                     </div>
                     <div class="col-lg-3">
                         <div class="categories__item set-bg" data-setbg="img/categories/cat-2.jpg">
-                            <h5><a href="#">Dried Fruit</a></h5>
+                            <h5><a href="#" id="cat2-link">Dried Fruit</a></h5>
                         </div>
                     </div>
                     <div class="col-lg-3">
                         <div class="categories__item set-bg" data-setbg="img/categories/cat-3.jpg">
-                            <h5><a href="#">Vegetables</a></h5>
+                            <h5><a href="#" id="cat3-link">Vegetables</a></h5>
                         </div>
                     </div>
                     <div class="col-lg-3">
                         <div class="categories__item set-bg" data-setbg="img/categories/cat-4.jpg">
-                            <h5><a href="#">drink fruits</a></h5>
+                            <h5><a href="#" id="cat4-link">Drink Fruits</a></h5>
                         </div>
                     </div>
                     <div class="col-lg-3">
                         <div class="categories__item set-bg" data-setbg="img/categories/cat-5.jpg">
-                            <h5><a href="#">drink fruits</a></h5>
+                            <h5><a href="#" id="cat5-link">Drink Fruits</a></h5>
                         </div>
                     </div>
                 </div>
@@ -177,15 +177,15 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <h2>Featured Product</h2>
+                        <h2 id="featured-title">Featured Product</h2>
                     </div>
                     <div class="featured__controls">
                         <ul>
-                            <li class="active" data-filter="*">All</li>
-                            <li data-filter=".oranges">Oranges</li>
-                            <li data-filter=".fresh-meat">Fresh Meat</li>
-                            <li data-filter=".vegetables">Vegetables</li>
-                            <li data-filter=".fastfood">Fastfood</li>
+                            <li class="active" data-filter="*" id="all-filter">All</li>
+                            <li data-filter=".oranges" id="oranges-filter">Oranges</li>
+                            <li data-filter=".fresh-meat" id="meat-filter">Fresh Meat</li>
+                            <li data-filter=".vegetables" id="vegetables-filter">Vegetables</li>
+                            <li data-filter=".fastfood" id="fastfood-filter">Fastfood</li>
                         </ul>
                     </div>
                 </div>
@@ -201,12 +201,12 @@
                             </ul>
                         </div>
                         <div class="featured__item__text">
-                            <h6><a href="#">Crab Pool Security</a></h6>
-                            <h5>$30.00</h5>
+                            <h6><a href="#" id="prod1-link">Organic Bananas</a></h6>
+                            <h5>$15.00</h5>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fastfood">
+                <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fresh-meat">
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-2.jpg">
                             <ul class="featured__item__pic__hover">
@@ -216,12 +216,12 @@
                             </ul>
                         </div>
                         <div class="featured__item__text">
-                            <h6><a href="#">Crab Pool Security</a></h6>
-                            <h5>$30.00</h5>
+                            <h6><a href="#" id="prod2-link">Orange Fresh Juice</a></h6>
+                            <h5>$25.00</h5>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fresh-meat">
+                <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood fresh-meat">
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-3.jpg">
                             <ul class="featured__item__pic__hover">
@@ -231,12 +231,12 @@
                             </ul>
                         </div>
                         <div class="featured__item__text">
-                            <h6><a href="#">Crab Pool Security</a></h6>
-                            <h5>$30.00</h5>
+                            <h6><a href="#" id="prod3-link">Healthy Egg Sandwich</a></h6>
+                            <h5>$12.00</h5>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood oranges">
+                <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fastfood">
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-4.jpg">
                             <ul class="featured__item__pic__hover">
@@ -246,68 +246,8 @@
                             </ul>
                         </div>
                         <div class="featured__item__text">
-                            <h6><a href="#">Crab Pool Security</a></h6>
-                            <h5>$30.00</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-5.jpg">
-                            <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">Crab Pool Security</a></h6>
-                            <h5>$30.00</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fastfood">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-6.jpg">
-                            <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">Crab Pool Security</a></h6>
-                            <h5>$30.00</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-7.jpg">
-                            <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">Crab Pool Security</a></h6>
-                            <h5>$30.00</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood vegetables">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-8.jpg">
-                            <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">Crab Pool Security</a></h6>
-                            <h5>$30.00</h5>
+                            <h6><a href="#" id="prod4-link">Tomato & Bread</a></h6>
+                            <h5>$10.00</h5>
                         </div>
                     </div>
                 </div>
@@ -317,29 +257,45 @@
     <!-- Featured Section End -->
 
     <!-- Footer Section Begin -->
-    <footer class="footer spad">
+    <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="col-lg-5 col-md-6 col-sm-6">
                     <div class="footer__about">
                         <div class="footer__about__logo">
-                            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                            <a href="#"><img src="img/logo.png" alt=""></a>
                         </div>
                         <ul>
-                            <li>Address: Av. Montes Americanos, Sector 35, 31216 Chihuahua, Chih.</li>
-                            <li>Phone: +55 614-432-2000</li>
-                            <li>Email: tianguisutch@gmail.com</li>
+                            <li><i class="fa fa-map-marker"></i> Texcoco, Estado de México, México</li>
+                            <li><i class="fa fa-phone"></i> +52 55 258 39 77</li>
+                            <li><i class="fa fa-envelope"></i> tianguisutch@gmail.com</li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
+                <div class="col-lg-2 col-md-3 col-sm-6">
                     <div class="footer__widget">
-                        <h6>Useful Links</h6>
+                        <h6 id="footer-links-title">Useful Links</h6>
                         <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">About Our Shop</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Our Sitemap</a></li>
+                            <li><a href="./index.html" id="footer-home-link">Home</a></li>
+                            <li><a href="./shop-grid.html" id="footer-shop-link">Shop</a></li>
+                            <li><a href="./blog.html" id="footer-blog-link">Blog</a></li>
+                            <li><a href="./contact.html" id="footer-contact-link">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-3 col-sm-6">
+                    <div class="footer__widget">
+                        <h6 id="footer-newsletter-title">Newsletter</h6>
+                        <form action="#">
+                            <input type="text" placeholder="Enter your email">
+                            <button type="submit" class="site-btn">Subscribe</button>
+                        </form>
+                        <ul class="footer__widget__social">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -359,39 +315,88 @@
     <script src="js/main.js"></script>
 
     <script>
-        const languageData = {
+        const translations = {
             en: {
-                language: "English",
-                greeting: "Hello! What do you need?",
-                login: "Login"
+                "current-language": "English",
+                "login-text": "Login",
+                "home-link": "Home",
+                "shop-link": "Shop",
+                "pages-link": "Pages",
+                "shop-details-link": "Shop Details",
+                "shopping-cart-link": "Shopping Cart",
+                "checkout-link": "Check Out",
+                "blog-details-link": "Blog Details",
+                "blog-link": "Blog",
+                "contact-link": "Contact",
+                "search-input": "What do you need?",
+                "search-button": "Search",
+                "featured-title": "Featured Product",
+                "all-filter": "All",
+                "oranges-filter": "Oranges",
+                "meat-filter": "Fresh Meat",
+                "vegetables-filter": "Vegetables",
+                "fastfood-filter": "Fastfood",
+                "prod1-link": "Organic Bananas",
+                "prod2-link": "Orange Fresh Juice",
+                "prod3-link": "Healthy Egg Sandwich",
+                "prod4-link": "Tomato & Bread",
+                "footer-links-title": "Useful Links",
+                "footer-home-link": "Home",
+                "footer-shop-link": "Shop",
+                "footer-blog-link": "Blog",
+                "footer-contact-link": "Contact",
+                "footer-newsletter-title": "Newsletter"
             },
             es: {
-                language: "Español",
-                greeting: "¡Hola! ¿Qué necesitas?",
-                login: "Iniciar Sesión"
+                "current-language": "Español",
+                "login-text": "Iniciar sesión",
+                "home-link": "Inicio",
+                "shop-link": "Tienda",
+                "pages-link": "Páginas",
+                "shop-details-link": "Detalles de la tienda",
+                "shopping-cart-link": "Carrito de compras",
+                "checkout-link": "Pagar",
+                "blog-details-link": "Detalles del blog",
+                "blog-link": "Blog",
+                "contact-link": "Contacto",
+                "search-input": "¿Qué necesitas?",
+                "search-button": "Buscar",
+                "featured-title": "Producto Destacado",
+                "all-filter": "Todos",
+                "oranges-filter": "Naranjas",
+                "meat-filter": "Carne Fresca",
+                "vegetables-filter": "Verduras",
+                "fastfood-filter": "Comida Rápida",
+                "prod1-link": "Plátanos Orgánicos",
+                "prod2-link": "Jugo de Naranja Fresco",
+                "prod3-link": "Sándwich de Huevo Saludable",
+                "prod4-link": "Tomate y Pan",
+                "footer-links-title": "Enlaces Útiles",
+                "footer-home-link": "Inicio",
+                "footer-shop-link": "Tienda",
+                "footer-blog-link": "Blog",
+                "footer-contact-link": "Contacto",
+                "footer-newsletter-title": "Boletín"
             }
         };
-    
+
         function changeLanguage(lang) {
-            document.getElementById('current-language').textContent = languageData[lang].language;
-            document.getElementById('login-text').textContent = languageData[lang].login;
-            // Aquí puedes agregar más elementos que necesiten actualizarse según el idioma
-        }
-    
-        document.addEventListener('DOMContentLoaded', () => {
-            const languageOptions = document.getElementById('language-options');
-            languageOptions.addEventListener('click', (event) => {
-                const lang = event.target.getAttribute('data-lang');
-                if (lang) {
-                    changeLanguage(lang);
+            const elements = document.querySelectorAll('[id]');
+            elements.forEach(element => {
+                const key = element.id;
+                if (translations[lang][key]) {
+                    element.textContent = translations[lang][key];
                 }
             });
+        }
+
+        document.getElementById('language-options').addEventListener('click', function(e) {
+            if (e.target.tagName === 'LI') {
+                const lang = e.target.dataset.lang;
+                changeLanguage(lang);
+            }
         });
-    
-        // Configuración inicial
-        changeLanguage('en');  // Configura el idioma inicial
     </script>
-    
 </body>
 
 </html>
