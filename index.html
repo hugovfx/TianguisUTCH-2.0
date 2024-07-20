@@ -23,8 +23,28 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
 
     <style>
-      
+        #language-options {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+    
+        #language-options li {
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+    
+        #language-options li:hover {
+            background-color: #ddd;
+        }
+    
+        .header__top__right__language:hover #language-options {
+            display: block;
+        }
     </style>
+    
 </head>
 
 <body>
@@ -45,22 +65,24 @@
                             </ul>
                         </div>
                     </div>
+
                     <div class="col-lg-6 col-md-6">
                         <div class="header__top__right">
                             <div class="header__top__right__language">
                                 <img src="img/language.png" alt="">
-                                <div>English</div>
+                                <div id="current-language">English</div>
                                 <span class="arrow_carrot-down"></span>
-                                <ul>
-                                    <li><a href="#">Spanis</a></li>
-                                    <li><a href="#">English</a></li>
+                                <ul id="language-options">
+                                    <li data-lang="en">English</li>
+                                    <li data-lang="es">Español</li>
                                 </ul>
                             </div>
                             <div class="header__top__right__auth">
-                                <a href="#"><i class="fa fa-user"></i>Login</a>
+                                <a href="#"><i class="fa fa-user"></i><span id="login-text">Login</span></a>
                             </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </div>
@@ -336,8 +358,40 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
 
-
-
+    <script>
+        const languageData = {
+            en: {
+                language: "English",
+                greeting: "Hello! What do you need?",
+                login: "Login"
+            },
+            es: {
+                language: "Español",
+                greeting: "¡Hola! ¿Qué necesitas?",
+                login: "Iniciar Sesión"
+            }
+        };
+    
+        function changeLanguage(lang) {
+            document.getElementById('current-language').textContent = languageData[lang].language;
+            document.getElementById('login-text').textContent = languageData[lang].login;
+            // Aquí puedes agregar más elementos que necesiten actualizarse según el idioma
+        }
+    
+        document.addEventListener('DOMContentLoaded', () => {
+            const languageOptions = document.getElementById('language-options');
+            languageOptions.addEventListener('click', (event) => {
+                const lang = event.target.getAttribute('data-lang');
+                if (lang) {
+                    changeLanguage(lang);
+                }
+            });
+        });
+    
+        // Configuración inicial
+        changeLanguage('en');  // Configura el idioma inicial
+    </script>
+    
 </body>
 
 </html>
