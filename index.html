@@ -43,8 +43,14 @@
         .header__top__right__language:hover #language-options {
             display: block;
         }
+
+        .featured__item {
+            position: relative;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ajusta el tamaño, desenfoque y color según tus necesidades */
+            border-radius: 8px; /* Opcional: agrega bordes redondeados */
+            overflow: hidden; /* Asegura que la sombra no se extienda fuera del contenedor */
+        }
     </style>
-    
 </head>
 
 <body>
@@ -69,7 +75,7 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="header__top__right">
                             <div class="header__top__right__language">
-                                <img src="img/language.png" alt="">
+                                <img src="img/language.png" id="language-img" alt="" style="width: 30px;">
                                 <div id="current-language">English</div>
                                 <span class="arrow_carrot-down"></span>
                                 <ul id="language-options">
@@ -82,26 +88,16 @@
                             </div>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </div>
         <div class="container">
             <div class="row">
-                
                 <div class="col-lg-6">
                     <nav class="header__menu">
                         <ul>
                             <li class="active"><a href="./index.html" id="home-link">Home</a></li>
                             <li><a href="./shop-grid.html" id="shop-link">Shop</a></li>
-                            <li><a href="#" id="pages-link">Pages</a>
-                                <ul class="header__menu__dropdown">
-                                    <li><a href="./shop-details.html" id="shop-details-link">Shop Details</a></li>
-                                    <li><a href="./shoping-cart.html" id="shopping-cart-link">Shoping Cart</a></li>
-                                    <li><a href="./checkout.html" id="checkout-link">Check Out</a></li>
-                                    <li><a href="./blog-details.html" id="blog-details-link">Blog Details</a></li>
-                                </ul>
-                            </li>
                             <li><a href="./blog.html" id="blog-link">Blog</a></li>
                             <li><a href="./contact.html" id="contact-link">Contact</a></li>
                         </ul>
@@ -114,26 +110,6 @@
         </div>
     </header>
     <!-- Header Section End -->
-
-    <!-- Hero Section Begin -->
-    <section class="hero">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-9">
-                    <div class="hero__search">
-                        <div class="hero__search__form">
-                          <form action="#">
-                            <input type="text" placeholder="What do you need?" id="search-input">
-                            <button type="submit" class="site-btn" id="search-button">Search</button>
-                        </form>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Hero Section End -->
 
     <!-- Categories Section Begin -->
     <section class="categories">
@@ -158,11 +134,6 @@
                     <div class="col-lg-3">
                         <div class="categories__item set-bg" data-setbg="img/categories/cat-4.jpg">
                             <h5><a href="#" id="cat4-link">Drink Fruits</a></h5>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="img/categories/cat-5.jpg">
-                            <h5><a href="#" id="cat5-link">Drink Fruits</a></h5>
                         </div>
                     </div>
                 </div>
@@ -190,68 +161,15 @@
                     </div>
                 </div>
             </div>
-            <div class="row featured__filter">
-                <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-1.jpg">
-                            <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#" id="prod1-link">Organic Bananas</a></h6>
-                            <h5>$15.00</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fresh-meat">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-2.jpg">
-                            <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#" id="prod2-link">Orange Fresh Juice</a></h6>
-                            <h5>$25.00</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood fresh-meat">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-3.jpg">
-                            <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#" id="prod3-link">Healthy Egg Sandwich</a></h6>
-                            <h5>$12.00</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fastfood">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-4.jpg">
-                            <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#" id="prod4-link">Tomato & Bread</a></h6>
-                            <h5>$10.00</h5>
-                        </div>
-                    </div>
-                </div>
+
+            <!-- Inicio de productos -->
+            <div class="row featured__filter" id="product-list">
+
+                <!-- Aqui se añadira el codigo  de cada producto -->
+                
             </div>
+            <!-- Final de productos -->
+
         </div>
     </section>
     <!-- Featured Section End -->
@@ -283,22 +201,6 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-5 col-md-3 col-sm-6">
-                    <div class="footer__widget">
-                        <h6 id="footer-newsletter-title">Newsletter</h6>
-                        <form action="#">
-                            <input type="text" placeholder="Enter your email">
-                            <button type="submit" class="site-btn">Subscribe</button>
-                        </form>
-                        <ul class="footer__widget__social">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
             </div>
         </div>
     </footer>
@@ -321,15 +223,8 @@
                 "login-text": "Login",
                 "home-link": "Home",
                 "shop-link": "Shop",
-                "pages-link": "Pages",
-                "shop-details-link": "Shop Details",
-                "shopping-cart-link": "Shopping Cart",
-                "checkout-link": "Check Out",
-                "blog-details-link": "Blog Details",
                 "blog-link": "Blog",
                 "contact-link": "Contact",
-                "search-input": "What do you need?",
-                "search-button": "Search",
                 "featured-title": "Featured Product",
                 "all-filter": "All",
                 "oranges-filter": "Oranges",
@@ -337,30 +232,19 @@
                 "vegetables-filter": "Vegetables",
                 "fastfood-filter": "Fastfood",
                 "prod1-link": "Organic Bananas",
-                "prod2-link": "Orange Fresh Juice",
-                "prod3-link": "Healthy Egg Sandwich",
-                "prod4-link": "Tomato & Bread",
                 "footer-links-title": "Useful Links",
                 "footer-home-link": "Home",
                 "footer-shop-link": "Shop",
                 "footer-blog-link": "Blog",
-                "footer-contact-link": "Contact",
-                "footer-newsletter-title": "Newsletter"
+                "footer-contact-link": "Contact"
             },
             es: {
                 "current-language": "Español",
                 "login-text": "Iniciar sesión",
                 "home-link": "Inicio",
                 "shop-link": "Tienda",
-                "pages-link": "Páginas",
-                "shop-details-link": "Detalles de la tienda",
-                "shopping-cart-link": "Carrito de compras",
-                "checkout-link": "Pagar",
-                "blog-details-link": "Detalles del blog",
                 "blog-link": "Blog",
                 "contact-link": "Contacto",
-                "search-input": "¿Qué necesitas?",
-                "search-button": "Buscar",
                 "featured-title": "Producto Destacado",
                 "all-filter": "Todos",
                 "oranges-filter": "Naranjas",
@@ -368,15 +252,11 @@
                 "vegetables-filter": "Verduras",
                 "fastfood-filter": "Comida Rápida",
                 "prod1-link": "Plátanos Orgánicos",
-                "prod2-link": "Jugo de Naranja Fresco",
-                "prod3-link": "Sándwich de Huevo Saludable",
-                "prod4-link": "Tomate y Pan",
                 "footer-links-title": "Enlaces Útiles",
                 "footer-home-link": "Inicio",
                 "footer-shop-link": "Tienda",
                 "footer-blog-link": "Blog",
-                "footer-contact-link": "Contacto",
-                "footer-newsletter-title": "Boletín"
+                "footer-contact-link": "Contacto"
             }
         };
 
@@ -388,6 +268,14 @@
                     element.textContent = translations[lang][key];
                 }
             });
+            
+            // Change language image
+            const languageImg = document.getElementById('language-img');
+            if (lang === 'es') {
+                languageImg.src = 'img/MXlenguaje.png';
+            } else {
+                languageImg.src = 'img/language.png';
+            }
         }
 
         document.getElementById('language-options').addEventListener('click', function(e) {
@@ -396,6 +284,29 @@
                 changeLanguage(lang);
             }
         });
+
+        
+
+        function addElement(name, price, category, img){
+            var div = document.getElementById("product-list");
+            div.innerHTML += 
+            `<div class="col-lg-3 col-md-4 col-sm-6 mix ${category} fresh-meat">
+                <div class="featured__item">
+                    <img src="${img}" alt="Featured Item" class="featured__item__pic">
+                    <div class="featured__item__text">
+                        <h6><a href="#" id="prod1-link">${name}</a></h6>
+                        <h5>$${price}</h5>
+                    </div>
+                </div>
+            </div>
+`;
+        }
+        addElement("Naranja rosa",15.00, "fastfood", "https://t1.gstatic.com/licensed-image?q=tbn:ANd9GcR8cwEvC4A6CutRrMu2vXyQxuAvoUzEdeo34TZH2E6tjxX3yAeKJaBU_Ib5yFpgtpoA");
+        addElement("Hamburguesa",25.00, "fastfood", "https://img.freepik.com/foto-gratis/deliciosa-hamburguesa-aislado-sobre-fondo-blanco_125540-3368.jpg")
+        addElement("Taco", 20.00, "fastfood", "https://png.pngtree.com/png-clipart/20230429/original/pngtree-mexican-taco-crepes-with-lemon-sauce-psd-transparent-png-image_9121918.png")
+        addElement("Vape", 200.00, "all", "https://www.grino.mx/cdn/shop/files/X-boxmint.png?v=1712783111")
+        
+
     </script>
 </body>
 
