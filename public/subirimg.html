@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir Imágenes</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.21/dist/css/uikit.min.css" />
+</head>
+<body>
+    <div class="uk-container">
+        <h1 class="uk-heading-medium">Subir Imágenes</h1>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <div class="uk-margin">
+                <div uk-form-custom="target: true">
+                    <input type="file" name="image">
+                    <input class="uk-input uk-form-width-medium" type="text" placeholder="Seleccionar imagen" disabled>
+                </div>
+            </div>
+            <button class="uk-button uk-button-primary" type="submit">Subir</button>
+        </form>
+
+        <h2 class="uk-heading-line"><span>Imágenes Subidas</span></h2>
+        <div id="images"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.21/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.21/dist/js/uikit-icons.min.js"></script>
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+
+            fetch('/upload', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                alert(data);
+                loadImages();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+
+        function loadImages() {
+            fetch('/images')
+            .then(response => response.json())
+            .then(data => {
+                const imagesDiv = document.getElementById('images');
+                imagesDiv.innerHTML = '';
+                data.forEach(image => {
+                    const img = document.createElement('img');
+                    img.src = image.url;
+                    img.classList.add('uk-margin-small-right', 'uk-margin-small-bottom');
+                    imagesDiv.appendChild(img);
+                });
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', loadImages);
+    </script>
+</body>
+</html>
